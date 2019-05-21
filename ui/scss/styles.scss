@@ -1,4 +1,5 @@
-$test: red;
-body {
- background-color: $test;
-}
+$colors: (
+  primary: #7D7D7D,
+  accent1: #fff,
+  accent2: #000,
+);
