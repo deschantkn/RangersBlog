@@ -1,0 +1,61 @@
+.details {
+  display: flex;
+  flex-direction: row; }
+
+.owner-img {
+  margin: 20px 0;
+  height: 120px; }
+
+.date {
+  font-family: 'Courier New', Courier, monospace; }
+
+.icon {
+  height: 200px;
+  width: 100%; }
+
+.owner {
+  font-style: italic;
+  font-size: 20px;
+  color: #aa0f0f; }
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  text-align: center; }
+
+.content p {
+  font-style: italic;
+  font-size: 20px; }
+
+.right {
+  margin-top: 20px; }
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: #ffffff;
+    margin: 0 50px; }
+  .content h3 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif; }
+  .icon {
+    height: 250px;
+    width: 100%; }
+  .right {
+    margin-top: 20px; } }
+
+@media only screen and (min-width: 1200px) {
+  body {
+    margin: 0 200px; } }
+
+@media only screen and (min-width: 1400px) {
+  body {
+    background-color: #ffffff;
+    margin: 0 300px; }
+  .content h3 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif; }
+  .icon {
+    height: 400px;
+    width: 100%; }
+  .right {
+    margin-top: 30px; } }
