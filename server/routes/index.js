@@ -4,6 +4,6 @@ import authRouter from './authRouter';
 const api = express();
 
 // routes go here
-api.use('/signup', authRouter);
+api.use('/auth', authRouter);
 
 export default api;

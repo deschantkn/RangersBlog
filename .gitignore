@@ -64,3 +64,5 @@ dist
 server/data/*
 
 ui/
+
+.vscode
