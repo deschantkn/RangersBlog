@@ -63,6 +63,6 @@ typings/
 dist
 server/data/*
 
-ui/css/styles.css
+ui/css/*
 
 .vscode
