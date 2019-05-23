@@ -1,5 +1,65 @@
 $mainColor : #9b9da0;
 $test: red;
+.float {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .float .tooltiptext {
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  .float .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .float:hover .tooltiptext {
+    visibility: visible;
+  }
+.like{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: 20px;
+}
+
+#down{
+    color: white;
+}
+.float{
+    width:60px;
+    height:60px;
+    background-color: $mainColor;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+    margin-bottom: 10px;
+}
+.my-float{
+    margin-top:22px;
+}
 
 .details{
     display: flex;
@@ -43,7 +103,18 @@ $test: red;
 }
 
 @media only screen and (min-width: 600px) {
-    body {
+    .float{
+        margin-left: 10px;
+    }
+    .like{
+        position: fixed;
+        margin: auto;
+        margin: auto;
+        display: flex;
+        bottom: 40px;
+        flex-direction: row;
+    }
+    .container {
         background-color: #ffffff;
         margin: 0 50px;
     }
@@ -64,14 +135,27 @@ $test: red;
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    body {
+@media only screen and (min-width: 1100px) {
+    .container {
         margin: 0 200px;
+    }
+    .float{
+        margin-left: 10px;
+    }
+    .like{
+        margin-left: 100px;
+        flex-direction: column;
     }
 }
 
 @media only screen and (min-width: 1400px) {
-    body {
+    .float{
+        margin-left: 10px;
+    }
+    .like{
+        flex-direction: column;
+    }
+    .container {
         background-color: #ffffff;
         margin: 0 300px;
        }
@@ -91,5 +175,9 @@ $test: red;
        
        .right{
         margin-top: 30px;
+    }
+
+    .like-container{
+        margin-left: 100px;
     }
 }
