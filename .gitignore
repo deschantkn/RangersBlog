@@ -63,4 +63,4 @@ typings/
 dist
 server/data/*
 
-ui/
+ui/css
