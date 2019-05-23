@@ -66,3 +66,5 @@ server/data/*
 ui/css/styles.css
 
 ui/.DS_Store
+ui/css/read.css
+package-lock.json
