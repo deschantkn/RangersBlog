@@ -31,3 +31,10 @@ for (let i = 0; i < 5; i++) {
     commentHolder.appendChild(iconHolder);
     commentsContainer.appendChild(commentHolder);
 }
+
+const follow = document.getElementsByClassName('follow')[0];
+
+follow.addEventListener('click', () => {
+    const text = follow.innerHTML;
+    text == 'follow' ? follow.innerHTML = 'un'+text : follow.innerHTML = 'follow';
+});
