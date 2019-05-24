@@ -73,6 +73,9 @@ body span.psw {
 		width: 160%;
 		margin: 50px auto;
 	}
+  
+   .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 /*# sourceMappingURL=styles.css.map */
 
@@ -88,6 +91,68 @@ $colors: (
     @return map-get($colors,$color-name);
 }
 
+/* sidebar */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  background-color:color(accent4); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; 
+  transition: 0.5s; /* 0.5s effect to slide in the sidebar */
+}
+
+/* sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:color(accent2);
+  display: block;
+  transition: 0.3s;
+}
+
+/* hover */
+.sidebar a:hover {
+  color: color(primary);
+}
+
+/*  button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/* used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: color(primary);
+}
+
+/* Style page content - open the side navigation */
+#main {
+  transition: margin-left .5s; /*  transition effect */
+  padding: 20px;
+  background:color(accent4)
+}
+
+
+=======
 body,html{
 
     height: 100%;
