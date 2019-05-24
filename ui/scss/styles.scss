@@ -2,14 +2,12 @@ $colors: (
   primary: #7D7D7D,
   accent1: #fff,
   accent2: #000,
-  accent3:#ccc,
   accent4:#f4c136
 );
 
 @function color($color-name){
     @return map-get($colors,$color-name);
 }
-
 /* sidebar */
 .sidebar {
   height: 100%; /* 100% Full-height */
@@ -47,7 +45,6 @@ $colors: (
   font-size: 36px;
   margin-left: 50px;
 }
-
 
 /* used to open the sidebar */
 .openbtn {
