@@ -1,0 +1,47 @@
+.latest {
+  width: 40%;
+  overflow: auto;
+  float: left;
+  padding-left: 10%; }
+  .latest .story {
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    margin: 20px 10px 10px 30px;
+    padding: 2px 10px 2px 30px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px grey; }
+    .latest .story p {
+      width: 600%;
+      overflow: hidden; }
+    .latest .story .l_img {
+      height: 200px;
+      width: 500px; }
+  .latest .header {
+    padding-left: 40%; }
+
+.popular {
+  width: 28%;
+  overflow: hidden;
+  float: left;
+  padding-left: 5%; }
+  .popular .story {
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    margin: 20px 10px 10px 30px;
+    padding: 2px 10px 2px 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px grey; }
+    .popular .story .oop {
+      float: left;
+      padding-left: 20px; }
+      .popular .story .oop p {
+        width: 600%;
+        overflow: hidden; }
+    .popular .story .p_img {
+      width: 100px;
+      height: 80px;
+      padding: 10px 2px 10px 80px; }
+  .popular .header {
+    padding-left: 40%; }

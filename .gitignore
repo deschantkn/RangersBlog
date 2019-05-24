@@ -63,14 +63,9 @@ typings/
 dist
 server/data/*
 
-<<<<<<< HEAD
-ui/css/styles.css
+# System Files
+.DS_Store
+Thumbs.db
 
-ui/.DS_Store
-ui/css/read.css
-package-lock.json
-=======
-ui/css/*
-
-.vscode
->>>>>>> origin/gh-pages
+# IDE - VSCode
+.vscode/*
