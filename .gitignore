@@ -63,4 +63,9 @@ typings/
 dist
 server/data/*
 
-ui/css/styles.css
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE - VSCode
+.vscode/*

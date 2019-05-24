@@ -1,0 +1,194 @@
+.float {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; }
+
+.float .tooltiptext {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1; }
+
+.float .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent; }
+
+.float:hover .tooltiptext {
+  visibility: visible; }
+
+.like {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 20px; }
+
+#down {
+  color: white; }
+
+.float {
+  width: 60px;
+  height: 60px;
+  background-color: #9b9da0;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  margin-bottom: 10px; }
+
+.my-float {
+  margin-top: 22px; }
+
+.details {
+  display: flex;
+  flex-direction: row; }
+
+.owner-img {
+  margin: 20px 0;
+  height: 120px; }
+
+.date {
+  font-family: 'Courier New', Courier, monospace; }
+
+.icon {
+  height: 200px;
+  width: 100%; }
+
+.owner {
+  font-style: italic;
+  font-size: 20px;
+  color: #aa0f0f; }
+
+.follow {
+  color: white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: auto;
+  background-color: #9b9da0; }
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  text-align: center; }
+
+.content p {
+  font-style: italic;
+  font-size: 20px; }
+
+.right {
+  margin-top: 20px; }
+
+.comments .title {
+  border-bottom: 1px solid;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px; }
+
+.comment {
+  display: flex;
+  flex-direction: row; }
+
+.comment_text {
+  border-bottom: 1px dashed;
+  margin-bottom: 20px; }
+
+.image {
+  height: 80px;
+  margin-right: 20px; }
+
+form {
+  margin: 20px; }
+
+form textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid gray;
+  font-size: 15px; }
+
+form .submit {
+  border-radius: 10px;
+  width: 100%;
+  font-size: 30px;
+  background-color: #9b9da0;
+  color: white;
+  font-family: 'Times New Roman', Times, serif; }
+
+form .submit:hover {
+  background-color: white;
+  color: #9b9da0;
+  font-family: 'Times New Roman', Times, serif; }
+
+@media only screen and (min-width: 600px) {
+  .float {
+    margin-left: 10px; }
+  .like {
+    position: fixed;
+    margin: auto;
+    margin: auto;
+    display: flex;
+    bottom: 40px;
+    flex-direction: row; }
+  .container {
+    background-color: #ffffff;
+    margin: 0 50px; }
+  .content h3 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif; }
+  .icon {
+    height: 250px;
+    width: 100%; }
+  .right {
+    margin-top: 20px; } }
+
+@media only screen and (min-width: 1100px) {
+  form {
+    display: flex;
+    flex-direction: row; }
+  form textarea {
+    width: 80%;
+    height: 100px; }
+  form .submit {
+    width: 18%;
+    height: 100%;
+    margin: auto; }
+  .container {
+    margin: 0 200px; }
+  .float {
+    margin-left: 10px; }
+  .like {
+    margin-left: 100px;
+    flex-direction: column; } }
+
+@media only screen and (min-width: 1400px) {
+  .float {
+    margin-left: 10px; }
+  .like {
+    flex-direction: column; }
+  .container {
+    background-color: #ffffff;
+    margin: 0 300px; }
+  .content h3 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif; }
+  .icon {
+    height: 400px;
+    width: 100%; }
+  .right {
+    margin-top: 30px; }
+  .like-container {
+    margin-left: 100px; } }

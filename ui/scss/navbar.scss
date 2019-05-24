@@ -1,0 +1,137 @@
+// valuables and values
+$bgcolor : #BDBDBD;
+$font : 18px;
+$textcolor : #FFFFFF;
+
+.main {
+  background-color: $textcolor;
+  width: 98%;
+  .navbar {
+
+      overflow: hidden;
+      background-color: $bgcolor;
+      padding: 10px;
+      transition: 0.4s;
+      width: 98%;
+      top: 0;
+      z-index: 99;
+      margin-right: -1%;
+
+    a {
+        float: left;
+        display: block;
+        text-align: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+    }
+
+    .logo {
+        font-size: 35px;
+        font-weight: bold;
+        transition: 0.4s;
+        float: left;
+    }
+
+    a:hover {
+        background: $bgcolor;
+        color: black;
+    }
+
+    .nav_contents {
+        float: right;
+        padding-left: none;
+        margin-right: 10px;
+        
+        #active {
+            background-color: $textcolor;
+            color: black;
+        }
+        
+        .story {
+            margin-right: 70px;
+        }
+
+        
+        //drop down
+        .account {
+            float: left;
+            overflow: hidden;
+
+            .login {
+                font-size: 16px; 
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0; 
+            }
+
+            .account-content {
+                display: none;
+                position: absolute;
+                background-color: rd;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                display: block;
+
+                a {
+                    float: none;
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    text-align: left;
+                }
+
+                a:hover {
+                    background-color: whitesmoke;
+                }
+            }
+            .content:hover {
+                display: block;
+            }
+
+            .pro {
+                width: 40px;
+                height: 40px;
+                padding-right: 2%;
+                padding-buttom: -2%;
+                border-radius: 50%;
+                border: 1px solid #FFFFFF;
+            }
+
+        }
+
+        .account:hover {
+            display: block;
+        }
+
+
+    }
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $bgcolor;
+    color: #FFFFFF;
+    text-align: center;
+    width: 99%;
+    margin-left: 0.5%;
+  }
+}
+
+
+
+
+
