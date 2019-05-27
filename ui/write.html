@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/create_article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/create_article.css">
+  <link href="css/sidebar.css" rel="stylesheet">
+  <script>
+      /*Open the sidebar*/
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      /* close the sidebar */
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+  </script>
 </head>
 <body>
+
+  <header>
+      <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="write.html">New article</a>
+      </div>
+  
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+  </header>
 
 <div class="container">
   <form action="action">
