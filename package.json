@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass ui/scss/* -o ui/css"
+    "scss": "node-sass -w ui/scss -o ui/css"
   },
   "author": "",
   "license": "ISC",

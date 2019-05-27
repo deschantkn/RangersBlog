@@ -60,58 +60,10 @@ body span.psw {
     width: 100; }
   form {
     width: 160%;
-    margin: 50px auto; } }
+    margin: 50px auto; }
+  .sidebar {
+    padding-top: 15px; }
+  .sidebar a {
+    font-size: 18px; } }
 
 /*# sourceMappingURL=styles.css.map */
-body, html {
-  height: 100%;
-  background-color: #fff;
-  width: 55%;
-  margin: 60px auto; }
-
-body {
-  background-color: #fff;
-  /* buttons */
-  /*  buttons */
-  /* cancel button */
-  /*  containers */
-  /*  "Forgot password"  */ }
-  body form {
-    background-color: #f4c136; }
-  body input[type=text], body input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #000;
-    box-sizing: border-box; }
-  body button {
-    background-color: #000;
-    color: #fff;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%; }
-  body button:hover {
-    opacity: 0.8; }
-  body .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f4c136; }
-  body .cancelbtn:hover {
-    background-color: red; }
-  body .container {
-    padding: 16px; }
-  body span.psw {
-    float: right;
-    padding-top: 16px; }
-
-@media screen and (max-width: 800px) {
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100; }
-  form {
-    width: 160%;
-    margin: 50px auto; } }
