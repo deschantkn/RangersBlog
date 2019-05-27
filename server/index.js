@@ -13,7 +13,7 @@ registerMiddleware(app);
 app.use('/api', api);
 
 sequelize
-  .authenticate()
+  .sync()
   .then(() => {
     app.listen(port, () => {
       // eslint-disable-next-line no-console
