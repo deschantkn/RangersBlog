@@ -82,7 +82,6 @@ body span.psw {
 $colors: (
   primary: #7D7D7D,
   accent1: #fff,
-  accent2: #000,
   accent4:#f4c136
 );
 
@@ -92,7 +91,7 @@ $colors: (
 /* sidebar */
 .sidebar {
   height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  width: 0; 
   position: fixed; /* Stay in place */
   z-index: 1; 
   top: 0;
