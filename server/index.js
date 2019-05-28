@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import api from './routes';
 import registerMiddleware from './middleware/registerMiddleware';
-import models, { sequelize } from './models';
+import { sequelize } from './models';
 
 dotenv.config();
 const port = process.env.PORT || 3000;
