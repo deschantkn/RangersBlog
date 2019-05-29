@@ -29,7 +29,13 @@ export default {
   edit: (req, res) => {
     models.Article.findByPk(req.params.id).then((article) => {
       if (article) {
-        req.send('exist');
+        if (article.UserId === req.userData.id) {
+          res.send('owner');
+        } else {
+          return res.status(401).send({
+            message: 'Access denied, you are not the owner',
+          });
+        }
       } else {
         return res.status(404).send({
           message: 'Article Not Found',
