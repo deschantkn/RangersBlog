@@ -1,6 +1,6 @@
 const user = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    name: {
+    names: {
       type: DataTypes.STRING,
     },
     email: {
@@ -8,6 +8,10 @@ const user = (sequelize, DataTypes) => {
     },
     password: {
       type: DataTypes.STRING,
+    },
+    followers: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: [],
     },
   });
 

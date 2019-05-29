@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { bcrypt, hashSync, genSaltSync } from 'bcrypt';
+import bcrypt, { hashSync, genSaltSync } from 'bcrypt';
 import models from '../models';
 
 const { User } = models;
