@@ -21,12 +21,20 @@ export default {
       return res.status(404).send({
         message: 'Article Not Found',
       });
-    } res.status(200).send(articles);
+    } return res.status(200).send(articles);
   }).catch(error => res.status(400).send({
     message: 'bad request!',
   })),
 
   edit: (req, res) => {
-    res.send('edit');
+    models.Article.findByPk(req.params.id).then((article) => {
+      if (article) {
+        req.send('exist');
+      } else {
+        return res.status(404).send({
+          message: 'Article Not Found',
+        });
+      }
+    });
   },
 };

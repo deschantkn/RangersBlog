@@ -13,6 +13,6 @@ const {
 articlesRouter.get('/:id', getArticle);
 articlesRouter.post('/create', checkAuth, Validator.schemaCreate, create);
 articlesRouter.get('/', list); // API route for user to get all books in the database
-articlesRouter.patch('/:id', checkAuth, edit);
+articlesRouter.patch('/:id', checkAuth, Validator.schemaCreate, edit);
 
 export default articlesRouter;
