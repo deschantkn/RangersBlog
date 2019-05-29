@@ -9,6 +9,9 @@ const user = (sequelize, DataTypes) => {
     password: {
       type: DataTypes.STRING,
     },
+    followers: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+    },
   });
 
   User.findByEmail = async (email) => {

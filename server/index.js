@@ -12,21 +12,14 @@ registerMiddleware(app);
 
 app.use('/api', api);
 
+const eraseDatabaseOnSync = true;
+
 sequelize
-  .sync()
+  .sync({ force: eraseDatabaseOnSync })
   .then(() => {
     app.listen(port, () => {
       // eslint-disable-next-line no-console
       console.log(`Server listening on port: ${port} in ${process.env.NODE_ENV} mode`);
-      models.User.create({
-        name: 'name',
-        email: 'email@e.mail',
-        password: '1234',
-      }).then(() => {
-        models.User.findByEmail('email@e.mail').then((res) => {
-          console.log('Test', res.dataValues);
-        });
-      });
     });
   })
   .catch((err) => {

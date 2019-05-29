@@ -2,7 +2,6 @@ import { Router } from 'express';
 import articlesController from '../controllers/articles';
 import Validator from '../middleware/validator';
 
-
 const articlesRouter = Router();
 
 const { create,list,getArticle } = articlesController;
