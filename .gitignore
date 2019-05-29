@@ -63,6 +63,6 @@ typings/
 dist
 server/data/*
 
-ui/scss/css 
+ui/
 
-pachage-lock.json
+.vscode

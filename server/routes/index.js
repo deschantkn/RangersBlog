@@ -1,15 +1,11 @@
 import express from 'express';
 import authRouter from './authRouter';
-import comment from '../models/comment';
-import addComment from '../controllers/AddComment'
+import articlesRouter from './articlesRouter';
 
 const api = express();
 
 // routes go here
 api.use('/auth', authRouter);
-
-api.post('/comment', addComment);
-//api.get('comment/:id', comment.get);
-//api.delete('delete/:id', comment.delete);
+api.use('/articles', articlesRouter);
 
 export default api;

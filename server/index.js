@@ -18,6 +18,18 @@ sequelize
     app.listen(port, () => {
       // eslint-disable-next-line no-console
       console.log(`Server listening on port: ${port} in ${process.env.NODE_ENV} mode`);
+<<<<<<< HEAD
+=======
+      models.User.create({
+        name: 'name',
+        email: 'email@e.mail',
+        password: '1234',
+      }).then(() => {
+        models.User.findByEmail('email@e.mail').then((res) => {
+          console.log('Test', res.dataValues);
+        });
+      });
+>>>>>>> c2ab639538aa8e4db245bf064a56b82b161c447e
     });
   })
   .catch((err) => {

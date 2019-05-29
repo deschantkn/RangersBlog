@@ -3,7 +3,12 @@ import Sequelize from 'sequelize';
 
 dotenv.config();
 
-const sequelize = new Sequelize(process.env.DB_URL);
+
+const sequelize = new Sequelize('RangersBlog', 'postgres', 'le66lit66', {
+  host: 'localhost',
+  dialect: 'postgres',
+  logging: false,
+});
 
 const models = {
   User: sequelize.import('./user'),
