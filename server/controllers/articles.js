@@ -30,7 +30,15 @@ export default {
     models.Article.findByPk(req.params.id).then((article) => {
       if (article) {
         if (article.UserId === req.userData.id) {
-          res.send('owner');
+          const { title, content } = req.body;
+          models.Article.update({
+            title,
+            content,
+          }, {
+            where: {
+              id: req.params.id,
+            },
+          }).then(() => res.status(200).send({ message: 'updated correctly' }));
         } else {
           return res.status(401).send({
             message: 'Access denied, you are not the owner',
