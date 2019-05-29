@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import api from './routes';
 import registerMiddleware from './middleware/registerMiddleware';
-import { sequelize } from './models';
+import models, { sequelize } from './models';
 
 dotenv.config();
 const port = process.env.PORT || 3000;
@@ -18,6 +18,15 @@ sequelize
     app.listen(port, () => {
       // eslint-disable-next-line no-console
       console.log(`Server listening on port: ${port} in ${process.env.NODE_ENV} mode`);
+      models.User.create({
+        name: 'name',
+        email: 'email@e.mail',
+        password: '1234',
+      }).then(() => {
+        models.User.findByEmail('email@e.mail').then((res) => {
+          console.log('Test', res.dataValues);
+        });
+      });
     });
   })
   .catch((err) => {
