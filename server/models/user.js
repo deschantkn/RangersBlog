@@ -11,6 +11,14 @@ const user = (sequelize, DataTypes) => {
     },
   });
 
+  User.findByEmail = async (email) => {
+    const queryResult = await User.findOne({
+      where: { email },
+    });
+
+    return queryResult;
+  };
+
   return User;
 };
 
