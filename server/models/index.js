@@ -3,7 +3,7 @@ import Sequelize from 'sequelize';
 
 dotenv.config();
 
-const sequelize = new Sequelize('rangersblog', 'deschantkounou', '', {
+const sequelize = new Sequelize('rangersblog', 'dianemurekatete', '', {
   host: 'localhost',
   dialect: 'postgres',
   logging: false,
