@@ -5,4 +5,6 @@ import checkAuth from '../middleware/checkauth';
 const userRouter = Router();
 const { follow } = userController;
 
-userRouter.get('/follow/:userId', checkAuth, follow);
+userRouter.get('/:userId', checkAuth, follow);
+
+export default userRouter;

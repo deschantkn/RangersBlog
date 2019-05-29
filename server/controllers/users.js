@@ -17,13 +17,16 @@ export default {
       // add current user to userToFollow's followers array
       dataValues.followers.push(currentUser);
 
+      console.log('userToFollow', userToFollow.dataValues);
+
       // update data
       User.update(
         { followers: dataValues.followers },
         { where: { id: req.params.userId } },
       ).then((savedUser) => {
+        console.log('savedUser', savedUser);
         // return response
-        return res.status(200).json({ message: `You are now following ${savedUser.dataValues.id}` });
+        return res.status(200).json({ message: `You are now following with id: ${savedUser}` });
       });
     });
   },
