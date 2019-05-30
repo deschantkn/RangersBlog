@@ -27,7 +27,7 @@ module.exports={
         //check if the comment exists
         const response = await Comment.findOne({ where: { id:commentId} });
         if (response === null) {
-            return res,status(404).send({
+            return res.status(404).send({
                 status:res.statusCode,
                 error:"Comment Not found"
             })

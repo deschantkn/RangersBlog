@@ -11,5 +11,4 @@ const deleteComment = async (req, res) => {
         message: "comment deleted successful"
     })
 };
-
 export default deleteComment;
