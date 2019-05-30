@@ -6,6 +6,14 @@ const article = (sequelize, DataTypes) => {
     content: {
       type: DataTypes.STRING,
     },
+    likes: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: [],
+    },
+    unlikes: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: [],
+    },
   });
 
   Article.associate = (models) => {
