@@ -3,7 +3,6 @@ import articlesController from '../controllers/articles';
 import Validator from '../middleware/validator';
 import checkAuth from '../middleware/checkauth';
 
-
 const articlesRouter = Router();
 
 const {
