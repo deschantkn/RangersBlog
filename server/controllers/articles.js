@@ -36,10 +36,10 @@ export default {
             title,
             content,
           }, {
-            where: {
-              id: req.params.id,
-            },
-          }).then(() => res.status(200).send({ message: 'updated correctly' }));
+              where: {
+                id: req.params.id,
+              },
+            }).then(() => res.status(200).send({ message: 'updated correctly' }));
         } else {
           return res.status(401).send({
             message: 'Access denied, you are not the owner',
@@ -56,7 +56,13 @@ export default {
   like: (req, res) => {
     Article.findByPk(req.params.id).then((article) => {
       if (article) {
-        res.send('yes');
+        if (article.UserId === req.userData.id) {
+          return res.status(401).send({
+            message: 'Action denied, you are the owner',
+          });
+        } else {
+          res.send('yes');
+        }
       } else {
         return res.status(404).send({
           message: 'Article Not Found',
