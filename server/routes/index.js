@@ -8,6 +8,6 @@ const api = express();
 // routes go here
 api.use('/auth', authRouter);
 api.use('/articles', articlesRouter);
-api.use('/follow', userRouter);
+api.use('/user', userRouter);
 
 export default api;

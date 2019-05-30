@@ -3,8 +3,9 @@ import userController from '../controllers/users';
 import checkAuth from '../middleware/checkauth';
 
 const userRouter = Router();
-const { follow } = userController;
+const { follow, unfollow } = userController;
 
-userRouter.get('/:userId', checkAuth, follow);
+userRouter.get('/follow/:userId', checkAuth, follow);
+userRouter.get('/unfollow/:userId', checkAuth, unfollow);
 
 export default userRouter;
