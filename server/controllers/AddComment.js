@@ -1,16 +1,17 @@
-
-import comment from "../models/comment";
 import models from "../models";
 
-const addComment = async (req, res) => {
-    const comment=await models.Comment.create (
-        {
-            comment: 'this is me',
-        },
+    
+   const addComment = (req, res) => {
+       console.log("============")
+       console.log(req.body);
+       console.log(req.userData)
+       
+        const { content } = req.body; 
+        models.Comment.create({
+            comment:content,
+            articleId:req.params.id,
+            UserId: req.userData.id,
+        }).then(Comment => res.json(Comment));
+    };
 
-    );
-    console.log('==============');
-    console.log(comment.dataValues);
-};
-
-export default addComment;
+    export default addComment;

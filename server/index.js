@@ -5,7 +5,7 @@ import registerMiddleware from './middleware/registerMiddleware';
 import models, { sequelize } from './models';
 
 dotenv.config();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4500;
 const app = express();
 
 registerMiddleware(app);
@@ -18,8 +18,6 @@ sequelize
     app.listen(port, () => {
       // eslint-disable-next-line no-console
       console.log(`Server listening on port: ${port} in ${process.env.NODE_ENV} mode`);
-<<<<<<< HEAD
-=======
       models.User.create({
         name: 'name',
         email: 'email@e.mail',
@@ -29,7 +27,6 @@ sequelize
           console.log('Test', res.dataValues);
         });
       });
->>>>>>> c2ab639538aa8e4db245bf064a56b82b161c447e
     });
   })
   .catch((err) => {
