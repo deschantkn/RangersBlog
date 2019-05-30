@@ -5,7 +5,7 @@ import registerMiddleware from './middleware/registerMiddleware';
 import { sequelize } from './models';
 
 dotenv.config();
-const port = process.env.PORT || 4500;
+const port = process.env.PORT || 3000;
 const app = express();
 
 registerMiddleware(app);

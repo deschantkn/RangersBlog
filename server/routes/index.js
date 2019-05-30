@@ -10,7 +10,7 @@ const api = express();
 // routes go here
 api.use('/auth', authRouter);
 api.use('/articles', articlesRouter);
-api.use('/article', commentRoutes );
+api.use('/article', commentRoutes);
 api.use('/follow', userRouter);
 
 export default api;
