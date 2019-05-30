@@ -1,18 +1,19 @@
 import models from '../models';
 
+const { Article } = models;
 export default {
   create: (req, res) => {
     const { title, content } = req.body;
-    models.Article.create({
+    Article.create({
       title,
       content,
       UserId: req.userData.id,
     }).then(article => res.json(article));
   },
 
-  list: (req, res) => models.Article.findAll().then(articles => res.status(200).send(articles)),
+  list: (req, res) => Article.findAll().then(articles => res.status(200).send(articles)),
 
-  getArticle: (req, res) => models.Article.findOne({
+  getArticle: (req, res) => Article.findOne({
     where: {
       id: req.params.id,
     },
@@ -27,11 +28,11 @@ export default {
   })),
 
   edit: (req, res) => {
-    models.Article.findByPk(req.params.id).then((article) => {
+    Article.findByPk(req.params.id).then((article) => {
       if (article) {
         if (article.UserId === req.userData.id) {
           const { title, content } = req.body;
-          models.Article.update({
+          Article.update({
             title,
             content,
           }, {
@@ -44,6 +45,18 @@ export default {
             message: 'Access denied, you are not the owner',
           });
         }
+      } else {
+        return res.status(404).send({
+          message: 'Article Not Found',
+        });
+      }
+    });
+  },
+
+  like: (req, res) => {
+    Article.findByPk(req.params.id).then((article) => {
+      if (article) {
+        res.send('yes');
       } else {
         return res.status(404).send({
           message: 'Article Not Found',
