@@ -77,4 +77,29 @@ export default {
       }
     });
   },
+
+  unlike: (req, res) => {
+    Article.findByPk(req.params.id).then((article) => {
+      if (article) {
+        if (article.UserId !== req.userData.id) {
+          article.unlikes.push(req.userData.id);
+          Article.update({
+            unlikes: article.unlikes,
+          }, {
+            where: {
+              id: req.params.id,
+            },
+          }).then(() => res.status(200).send({ message: 'unliked correctly' }));
+        } else {
+          return res.status(401).send({
+            message: 'Action denied, you are the owner',
+          });
+        }
+      } else {
+        return res.status(404).send({
+          message: 'Article Not Found',
+        });
+      }
+    });
+  },
 };
