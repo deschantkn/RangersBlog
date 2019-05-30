@@ -102,4 +102,26 @@ export default {
       }
     });
   },
+
+  deleteArticle: (req, res) => {
+    Article.findByPk(req.params.id).then((article) => {
+      if (article) {
+        if (article.UserId === req.userData.id) {
+          Article.destroy({
+            where: {
+              id: req.params.id,
+            },
+          }).then(() => res.status(200).send({ message: 'deleted correctly' }));
+        } else {
+          return res.status(401).send({
+            message: 'Access denied, you are not the owner',
+          });
+        }
+      } else {
+        return res.status(404).send({
+          message: 'Article Not Found',
+        });
+      }
+    });
+  },
 };

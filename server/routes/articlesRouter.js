@@ -6,7 +6,7 @@ import checkAuth from '../middleware/checkauth';
 const articlesRouter = Router();
 
 const {
-  create, list, getArticle, edit, like, unlike,
+  create, list, getArticle, edit, like, unlike, deleteArticle,
 } = articlesController;
 
 articlesRouter.get('/:id', getArticle);
@@ -15,6 +15,7 @@ articlesRouter.get('/', list); // API route for user to get all books in the dat
 articlesRouter.patch('/:id', checkAuth, Validator.schemaCreate, edit);
 articlesRouter.post('/:id/like', checkAuth, like);
 articlesRouter.post('/:id/unlike', checkAuth, unlike);
+articlesRouter.delete('/:id', checkAuth, deleteArticle);
 
 
 export default articlesRouter;
