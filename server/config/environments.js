@@ -15,6 +15,7 @@ environments.test = {
   dbname: process.env.TEST_DB_NAME,
   dbUser: process.env.TEST_DB_USER,
   dbPassword: process.env.TEST_DB_PASSWORD,
+  sequelizeEraseDb: process.env.ERASE_DB,
 };
 
 // Determine which environment we are in

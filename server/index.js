@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import api from './routes';
 import registerMiddleware from './middleware/registerMiddleware';
 import { sequelize } from './models';
+import environment from './config/environments';
 
 dotenv.config();
 const port = process.env.PORT || 3000;
@@ -13,7 +14,7 @@ registerMiddleware(app);
 
 app.use('/api', api);
 
-const eraseDatabaseOnSync = true;
+const eraseDatabaseOnSync = environment.sequelizeEraseDb;
 
 sequelize
   .sync({ force: eraseDatabaseOnSync })

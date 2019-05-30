@@ -25,6 +25,7 @@ export default {
         .label('Please Provide a valid names'),
       email: joi
         .string()
+        .email()
         .required()
         .label('Please provide a valid email'),
       password: joi

@@ -24,5 +24,22 @@ describe('Authentication', () => {
           done();
         });
     });
+
+    it('it should not create a new user account with invalid user object', (done) => {
+      const user = {
+        names: 'Test User',
+        email: 'dmail.com',
+        password: 'dfdfdfdf',
+      };
+
+      chai
+        .request(app)
+        .post('/api/auth/signup')
+        .send(user)
+        .end((err, res) => {
+          res.should.have.status(422);
+          done();
+        });
+    });
   });
 });
