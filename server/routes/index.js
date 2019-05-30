@@ -10,6 +10,7 @@ const api = express();
 // routes go here
 api.use('/auth', authRouter);
 api.use('/articles', articlesRouter);
+api.use('/user', userRouter);
 api.use('/article', commentRoutes);
 api.use('/follow', userRouter);
 
