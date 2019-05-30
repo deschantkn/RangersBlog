@@ -4,7 +4,7 @@ import Sequelize from 'sequelize';
 dotenv.config();
 
 
-const sequelize = new Sequelize('RangersBlog', 'postgres', 'le66lit66', {
+const sequelize = new Sequelize('rangers', 'ramadhan', 'postgres', {
   host: 'localhost',
   dialect: 'postgres',
   logging: false,
