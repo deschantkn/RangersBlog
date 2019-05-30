@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import express from 'express';
 import dotenv from 'dotenv';
 import api from './routes';
@@ -26,3 +27,5 @@ sequelize
     // eslint-disable-next-line no-console
     console.log(`Unable to connect to the databse ${err}`);
   });
+
+export default app;
