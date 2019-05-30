@@ -41,7 +41,7 @@ export default {
           password: hashPassword,
         });
 
-        res.status(201).json({
+        return res.status(201).json({
           message: 'Account successfully created',
           user: {
             id: users.id,

@@ -1,8 +1,10 @@
+import '@babel/polyfill';
 import express from 'express';
 import dotenv from 'dotenv';
 import api from './routes';
 import registerMiddleware from './middleware/registerMiddleware';
 import { sequelize } from './models';
+import environment from './config/environments';
 
 dotenv.config();
 const port = process.env.PORT || 3000;
@@ -12,7 +14,7 @@ registerMiddleware(app);
 
 app.use('/api', api);
 
-const eraseDatabaseOnSync = true;
+const eraseDatabaseOnSync = environment.sequelizeEraseDb;
 
 sequelize
   .sync({ force: eraseDatabaseOnSync })
@@ -26,3 +28,5 @@ sequelize
     // eslint-disable-next-line no-console
     console.log(`Unable to connect to the databse ${err}`);
   });
+
+export default app;

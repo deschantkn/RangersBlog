@@ -4,21 +4,27 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "mocha --recursive ./tests/*.js --exit --require @babel/register",
 		"start": "nodemon --exec babel-node server/index.js",
-		"build": "babel src --out-dir dist"
+		"build": "babel src --out-dir dist",
+		"serce": "node dist/server.js"
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/cli": "^7.4.4",
-		"@babel/core": "^7.4.4",
-		"@babel/node": "^7.2.2",
-		"@babel/preset-env": "^7.4.4",
+		"@babel/core": "^7.4.5",
+		"@babel/node": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/register": "^7.4.4",
+		"chai": "^4.2.0",
+		"chai-http": "^4.3.0",
 		"eslint": "^5.16.0",
 		"eslint-config-airbnb-base": "^13.1.0",
 		"eslint-plugin-import": "^2.17.2",
-		"nodemon": "^1.19.0"
+		"mocha": "^6.1.4",
+		"nodemon": "^1.19.0",
+		"nyc": "^14.1.1"
 	},
 	"dependencies": {
 		"@hapi/joi": "^15.0.3",
@@ -31,6 +37,7 @@
 		"joi": "^14.3.1",
 		"morgan": "^1.9.1",
 		"pg": "^7.11.0",
-		"sequelize": "^5.8.6"
+    "sequelize": "^5.8.6",
+		"@babel/polyfill": "^7.4.4"    
 	}
 }
