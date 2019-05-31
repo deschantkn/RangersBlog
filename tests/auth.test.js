@@ -42,4 +42,35 @@ describe('Authentication', () => {
         });
     });
   });
+
+  describe('POST - /api/auth/signin', () => {
+    const user1 = {
+      names: 'Test User',
+      email: 'yo@mail.com',
+      password: '1234erty',
+    };
+
+    chai
+      .request(app)
+      .post('/api/auth/signup')
+      .send(user1)
+      .end();
+
+    it('it should login an existing user', (done) => {
+      const user = {
+        email: 'd@mail.com',
+        password: '1234qwerty',
+      };
+
+      chai
+        .request(app)
+        .post('/api/auth/signin')
+        .send(user1)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.have.property('token');
+          done();
+        });
+    });
+  });
 });

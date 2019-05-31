@@ -6,13 +6,13 @@ dotenv.config();
 const environments = {};
 
 environments.dev = {
-  dbname: process.env.DB_NAME,
+  dbName: process.env.DB_NAME,
   dbUser: process.env.DB_USER,
   dbPassword: process.env.DB_PASSWORD,
 };
 
 environments.test = {
-  dbname: process.env.TEST_DB_NAME,
+  dbName: process.env.TEST_DB_NAME,
   dbUser: process.env.TEST_DB_USER,
   dbPassword: process.env.TEST_DB_PASSWORD,
   sequelizeEraseDb: process.env.ERASE_DB,
